@@ -1,26 +1,76 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Basic Needs</title>
-<link href="css/style.css" type="text/css" rel="stylesheet">
-<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<title>Basic Needs</title>
+	<meta name="author" content="Victor Korir">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link href="css/style.css" type="text/css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 </head>
 <body>
 	<div class="container text-center">
 		<div class="space"></div>
 		<div class="title"><img src="img/title.png"></div>
 		<div class="row left text-right">
-			<a href="" target="_blank"><img src="img/cal_fresh.png"></a>
-			<a href="" target="_blank"><img src="img/food_pantry.png"></a>
-			<a href="" target="_blank"><img src="img/garden_skills.png"></a>
+           <!--cal-fresh-->
+            <a href="javascript:openModal('cal-fresh-popup', 'cal-fresh-popup-img', 'img/cal-fresh-popup.png')">
+                <img id="cal-fresh" class="clickable-icon" src="img/cal-fresh.png">
+            </a>
+            <div id="cal-fresh-popup" class="modal">
+                <span class="close" onclick="javascript:closeModal('cal-fresh-popup')"><img src="img/close.png"></span>
+                <img class="modal-content cal-fresh-modal-content" id="cal-fresh-popup-img">
+            </div>
+			<!--food-pantry-->
+			<a href="javascript:openModal('food-pantry-popup', 'food-pantry-popup-img', 'img/food-pantry-popup.png')">
+				<img src="img/food-pantry.png">
+			</a>
+			<div id="food-pantry-popup" class="modal">
+                <span class="close" onclick="javascript:closeModal('food-pantry-popup')"><img src="img/close.png"></span>
+                <img class="modal-content food-pantry-modal-content" id="food-pantry-popup-img">
+            </div>
+			<!--garden-skills-->
+			<a href="javascript:openModal('garden-skills-popup', 'garden-skills-popup-img', 'img/garden-skills-popup.png')">
+				<img src="img/garden-skills.png">
+			</a>
+			<div id="garden-skills-popup" class="modal">
+                <span class="close" onclick="javascript:closeModal('garden-skills-popup')"><img src="img/close.png"></span>
+                <img class="modal-content garden-skills-modal-content" id="garden-skills-popup-img">
+            </div>
 		</div>
 		<div class="row right text-left">
-			<a href="" target="_blank"><img src="img/harvest_day.png"></a>
-			<a href="" target="_blank"><img src="img/food_assistance.png"></a>
-			<a href="" target="_blank"><img src="img/nutritional_sciences.png"></a>
+			<!--harvest-day-->
+			<a href="javascript:openModal('harvest-day-popup', 'harvest-day-popup-img', 'img/harvest-day-popup.png')">
+				<img src="img/harvest-day.png">
+			</a>
+			<div id="harvest-day-popup" class="modal">
+                <span class="close" onclick="javascript:closeModal('harvest-day-popup')"><img src="img/close.png"></span>
+                <img class="modal-content harvest-day-modal-content" id="harvest-day-popup-img">
+            </div>
+			<!--food-assistance-->
+			<a href="javascript:openModal('food-assistance-popup', 'food-assistance-popup-img', 'img/food-assistance-popup.png')">
+                <img id="food-assistance" class="clickable-icon" src="img/food-assistance.png">
+            </a>
+            <div id="food-assistance-popup" class="modal">
+                <span class="close" onclick="javascript:closeModal('food-assistance-popup')"><img src="img/close.png"></span>
+                <img class="modal-content food-assistance-modal-content" id="food-assistance-popup-img">
+            </div>
+			<!--nutritional-sciences-->
+			<a href="javascript:openModal('nutritional-science-popup', 'nutritional-science-popup-img', 'img/nutritional-science-popup.png')">
+				<img src="img/nutritional-science.png">
+			</a>
+			<div id="nutritional-science-popup" class="modal">
+                <span class="close" onclick="javascript:closeModal('nutritional-science-popup')">
+                	<img src="img/close.png">
+                </span>
+                <img class="modal-content nutritional-science-modal-content" id="nutritional-science-popup-img">
+            </div>
 		</div>
 		<div class="space"></div>
 	</div>
+	<script src="js/main.js" type="application/javascript"></script>
 </body>
 </html>
